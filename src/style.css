@@ -42,6 +42,14 @@ html, body {
     grid-area: r;
 }
 
+.rooms-list-logo-wrap {
+    text-align: center;
+}
+
+.rooms-list-logo {
+    width: 50%;
+}
+
 .message-list {
     grid-area: m;
 }
