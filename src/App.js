@@ -12,76 +12,22 @@ class App extends React.Component {
     
     constructor() {
         super()
-        this.state = {
-            roomId: null,
-            messages: [],
-            joinableRooms: [],
-            joinedRooms: []
-        }
-        this.sendMessage = this.sendMessage.bind(this)
-        this.subscribeToRoom = this.subscribeToRoom.bind(this)
-        this.getRooms = this.getRooms.bind(this)
     } 
     
     componentDidMount() {
-        const chatManager = new Chatkit.ChatManager({
-            instanceLocator,
-            userId: userName,
-            tokenProvider: new Chatkit.TokenProvider({
-                url: tokenUrl
-            })
-        })
         
-        chatManager.connect()
-        .then(currentUser => {
-            this.currentUser = currentUser
-            console.log(this.currentUser.rooms)
-            this.getRooms()
-        })
-        .catch(err => console.log('error on connecting: ', err))
     }
     
     getRooms() {
-        this.currentUser.getJoinableRooms()
-        .then(joinableRooms => {
-            this.setState({
-                joinableRooms,
-                joinedRooms: this.currentUser.rooms
-            })
-        })
-        .catch(err => console.log('error on joinableRooms: ', err))
+        
     }
     
-    subscribeToRoom(roomId) {
-        this.setState({ messages: [] })
-        this.currentUser.subscribeToRoom({
-            roomId: roomId,
-            hooks: {
-                onNewMessage: message => {
-                    this.setState({
-                        messages: [...this.state.messages, message]
-                    })
-                },
-                onUserStartedTyping: user => {
-                    /** render out the users */
-                }
-                
-            }
-        })
-        .then(room => {
-            this.setState({
-                roomId: room.id
-            })
-            this.getRooms()
-        })
-        .catch(err => console.log('error on subscribing to room: ', err))
+    subscribeToRoom() {
+
     }
     
     sendMessage(text) {
-        this.currentUser.sendMessage({
-            text,
-            roomId: this.state.roomId
-        })
+
     }
     
 
@@ -89,17 +35,19 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="app">
-                <RoomList
-                    subscribeToRoom={this.subscribeToRoom}
-                    rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
-                    roomId={this.state.roomId} />
-                <MessageList 
-                    roomId={this.state.roomId}
-                    messages={this.state.messages} />
-                <SendMessageForm
-                    disabled={!this.state.roomId}
-                    sendMessage={this.sendMessage} />
+            <div className="welcome-text">
+                <h1>Hi The Bad... Load your gun Cowboy!</h1>
+                <p>You must:</p>
+                <ol>
+                    <li>Build your app with snippet in bullets.txt</li>
+                    <li>Run your app and fix it!</li>
+                    <li>Enter the #Saloon room</li>
+                    <li>Use your Passphrase as fast as possible to shoot any message in the #Saloon room, gain access to the band of #ElPasoBank and some points!</li>
+                    <li>Enter the #ElPasoBank using your new band name</li>
+                    <li>Shoot any message in the #ElPasoBank and gain points!</li>
+                </ol>
+
+                <h2>Good Luck cowboy!</h2>
             </div>
         );
     }
