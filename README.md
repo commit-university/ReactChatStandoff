@@ -11,12 +11,14 @@ You must:
 - Shoot any message in the #ElPasoBank and gain points!
 
 Remember:
+
 In #Saloon room: you can use *rank to see your current team points.
+
 In #ElPasoBank room: you can use *rank to see your current team points and *bands to see current band members.
 
 Good Luck cowboy!
 
-## Progext bootstrap infos
+## Progect bootstrap infos
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
