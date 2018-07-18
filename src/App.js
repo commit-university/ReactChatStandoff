@@ -44,7 +44,7 @@ class App extends React.Component {
                     <li>Enter the #Saloon room</li>
                     <li>Use your Passphrase as fast as possible to shoot any message in the #Saloon room, gain access to the band of #ElPasoBank and some points!</li>
                     <li>Enter the #ElPasoBank using your new band name</li>
-                    <li>Shoot <strong>*shoot</strong> message in the #ElPasoBank and gain points!</li>
+                    <li>Shoot <strong>*bang</strong> message in the #ElPasoBank and gain points!</li>
                 </ol>
 
                 <p>In #Saloon room: you can use <strong>*rank</strong> to see your current team points.</p>
