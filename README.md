@@ -1,3 +1,22 @@
+## Commit University
+
+Hi The Bad... Load your gun Cowboy!
+You must:
+
+- Build your app with snippets in bullets.txt
+- Run your app and fix it!
+- Enter the #Saloon room
+- Use your Passphrase as fast as possible to shoot any message in the #Saloon room, gain access to the band of #ElPasoBank and some points!
+- Enter the #ElPasoBank using your new band name
+- Shoot any message in the #ElPasoBank and gain points!
+
+Remember:
+In #Saloon room: you can use *rank to see your current team points.
+In #ElPasoBank room: you can use *rank to see your current team points and *bands to see current band members.
+
+Good Luck cowboy!
+
+## Progext bootstrap infos
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

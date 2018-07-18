@@ -18,6 +18,7 @@ html, body {
 
 .welcome-text {
     color: var(--secondary-color);
+    padding: 16px;
 }
 
 #root {
